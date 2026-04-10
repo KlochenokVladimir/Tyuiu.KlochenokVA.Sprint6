@@ -14,16 +14,8 @@ namespace Tyuiu.KlochenokVA.Sprint6.Task2.V27.Lib
 
             for (int x = startValue; x <= stopValue; x++)
             {
-                double cosx = Math.Cos(x);
-                if (Math.Abs(cosx) < 1e-12)
-                {
-                    array[count] = 0; // avoid division by zero
-                }
-                else
-                {
-                    double value = 5.0 * x - 3.0 / cosx - Math.Sin(x);
-                    array[count] = Math.Round(value, 2);
-                }
+                double y = Math.Round(((2.0 * x - 3.0) / (Math.Cos(x) - 2.0 * x) + 5.0 * x - Math.Sin(x)), 2);
+                array[count] = y;
                 count++;
             }
 
