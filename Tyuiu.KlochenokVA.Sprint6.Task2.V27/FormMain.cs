@@ -1,77 +1,70 @@
-using System;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Globalization;
 using Tyuiu.KlochenokVA.Sprint6.Task2.V27.Lib;
-using System.Windows.Forms.DataVisualization.Charting;
-
 namespace Tyuiu.KlochenokVA.Sprint6.Task2.V27
 {
-    public partial class FormMain : Form
+    public partial class FormMain_KVA : Form
     {
-        public FormMain()
+        public FormMain_KVA()
         {
             InitializeComponent();
-            EnsureChart();
         }
 
-        private void EnsureChart()
-        {
-            if (chart_KVA == null)
-            {
-                chart_KVA = new Chart();
-                chart_KVA.Name = "chart_KVA";
-                chart_KVA.Location = new Point(270,38);
-                chart_KVA.Size = new Size(320,237);
-                var chartArea = new ChartArea("ChartArea1");
-                chart_KVA.ChartAreas.Add(chartArea);
-                var series = new Series("Series1") { ChartType = SeriesChartType.Line, ChartArea = "ChartArea1" };
-                chart_KVA.Series.Add(series);
-                groupBoxRes_KVA.Controls.Add(chart_KVA);
-            }
-            else
-            {
-                if (chart_KVA.ChartAreas.Count ==0) chart_KVA.ChartAreas.Add(new ChartArea("ChartArea1"));
-                if (chart_KVA.Series.Count ==0) chart_KVA.Series.Add(new Series("Series1") { ChartType = SeriesChartType.Line, ChartArea = "ChartArea1" });
-            }
-        }
 
-        private void buttonHelp_KVA_Click(object sender, EventArgs e)
+        DataService ds = new DataService();
+        private void buttonDone_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Табулирование функции F(x) на диапазоне с шагом1. F(x)=cos(x)+sin(x)/(2-2*x)-4*x. При делении на ноль возвращается0.", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void buttonDone_KVA_Click(object sender, EventArgs e)
-        {
-            var ds = new DataService();
             try
             {
-                int start = -5;
-                int stop =5;
-                if (!string.IsNullOrWhiteSpace(textBoxStart_KVA.Text)) int.TryParse(textBoxStart_KVA.Text, out start);
-                if (!string.IsNullOrWhiteSpace(textBoxStop_KVA.Text)) int.TryParse(textBoxStop_KVA.Text, out stop);
+                int startStep = Convert.ToInt32(textBoxStart_KVA.Text);
+                int stopStep = Convert.ToInt32(textBoxStop_KVA.Text);
 
-                var values = ds.GetMassFunction(start, stop);
+                // получаем настоящий массив значений
+                double[] valueArray = ds.GetMassFunction(startStep, stopStep);
 
-                DataGridView_KVA.Rows.Clear();
-                EnsureChart();
-                chart_KVA.Series[0].Points.Clear();
+                this.DataGridView_KVA.Rows.Clear();
+                this.chart_KVA.Series[0].Points.Clear();
 
-                int idx =0;
-                var ci = new CultureInfo("ru-RU");
-                for (int x = start; x <= stop; x++)
+                this.chart_KVA.ChartAreas[0].AxisX.Title = "Ось X";
+                this.chart_KVA.ChartAreas[0].AxisY.Title = "Ось Y";
+
+                int x = startStep;
+
+                for (int i = 0; i < valueArray.Length; i++)
                 {
-                    double v = values.Length > idx ? values[idx] :0.0;
-                    string fs = v.ToString("F2", ci);
-                    DataGridView_KVA.Rows.Add(x.ToString(), fs);
-                    chart_KVA.Series[0].Points.AddXY(x, v);
-                    idx++;
+                    this.DataGridView_KVA.Rows.Add(x.ToString(), valueArray[i].ToString());
+                    this.chart_KVA.Series[0].Points.AddXY(x, valueArray[i]);
+                    x++;
                 }
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("Произошла ошибка при вычислении", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ButtonInfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Таск 2 выполнил студент группы ИСПб-25-1 Клоченок Владимир Алексеевич");
+        }
+        private void buttonDone_MouseDown(object sender, EventArgs e)
+        {
+            buttonDone_KVA.BackColor = Color.Purple;
+        }
+        private void buttonDone_MouseEnter(object sender, EventArgs e)
+        {
+            buttonDone_KVA.BackColor = Color.White;
+        }
+        private void buttonDone_MouseLeave(object sender, EventArgs e)
+        {
+            buttonDone_KVA.BackColor = Color.Green;
+
+        }
+
+        private void FormMain_KVA_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

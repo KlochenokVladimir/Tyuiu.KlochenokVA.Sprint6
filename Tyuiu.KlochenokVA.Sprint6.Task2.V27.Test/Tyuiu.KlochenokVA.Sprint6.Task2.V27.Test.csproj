@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -15,6 +15,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tyuiu.KlochenokVA.Sprint6.Task2.V27.Lib\Tyuiu.KlochenokVA.Sprint6.Task2.V27.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="tyuiu.cources.programming.interfaces">
+      <HintPath>..\DLL\tyuiu.cources.programming.interfaces.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
