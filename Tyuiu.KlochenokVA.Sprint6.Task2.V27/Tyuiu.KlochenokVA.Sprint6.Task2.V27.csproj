@@ -9,13 +9,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Tyuiu.KlochenokVA.Sprint6.Task4.V29.Lib\Tyuiu.KlochenokVA.Sprint6.Task4.V29.Lib.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="System.Windows.Forms.DataVisualization" Version="1.0.0-prerelease.20110.1" />
 		<!-- Если нужен SQL-клиент — устанавливайте Microsoft.Data.SqlClient (рекомендуется). -->
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Tyuiu.KlochenokVA.Sprint6.Task2.V27.Lib\Tyuiu.KlochenokVA.Sprint6.Task2.V27.Lib.csproj" />
 	</ItemGroup>
 
 </Project>
