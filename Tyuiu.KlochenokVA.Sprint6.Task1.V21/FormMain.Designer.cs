@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.KlochenoKVA.Sprint6.Task1.V21
+﻿namespace Tyuiu.KlochenokVA.Sprint6.Task1.V21
 {
     partial class FormMain
     {
@@ -28,165 +28,158 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonDone_KVA = new Button();
-            buttonHelp_KVA = new Button();
-            groupBoxVvod_KVA = new GroupBox();
-            labelStop = new Label();
-            labelStart_KVA = new Label();
-            textBoxStart_KVA = new TextBox();
-            textBoxStop_KVA = new TextBox();
-            groupBoxResult_KVA = new GroupBox();
-            textBoxResult_KVA = new TextBox();
+            textBoxStartNum = new TextBox();
+            groupBoxTask = new GroupBox();
             textBoxTask = new TextBox();
-            groupBoxVvod_KVA.SuspendLayout();
-            groupBoxResult_KVA.SuspendLayout();
+            groupBoxInputData = new GroupBox();
+            textBoxEnd = new TextBox();
+            textBoxStart = new TextBox();
+            textBoxEndNum = new TextBox();
+            groupBoxResult = new GroupBox();
+            textBoxResult = new TextBox();
+            buttonResult = new Button();
+            groupBoxTask.SuspendLayout();
+            groupBoxInputData.SuspendLayout();
+            groupBoxResult.SuspendLayout();
             SuspendLayout();
             // 
-            // buttonDone_KVA
+            // textBoxStartNum
             // 
-            buttonDone_KVA.BackColor = Color.Green;
-            buttonDone_KVA.Location = new Point(436, 281);
-            buttonDone_KVA.Margin = new Padding(2, 1, 2, 1);
-            buttonDone_KVA.Name = "buttonDone_KVA";
-            buttonDone_KVA.Size = new Size(115, 54);
-            buttonDone_KVA.TabIndex = 10;
-            buttonDone_KVA.Text = "Выполнить";
-            buttonDone_KVA.UseVisualStyleBackColor = false;
-            buttonDone_KVA.Click += buttonDone_KVA_Click;
+            textBoxStartNum.Location = new Point(6, 57);
+            textBoxStartNum.Name = "textBoxStartNum";
+            textBoxStartNum.ReadOnly = true;
+            textBoxStartNum.Size = new Size(125, 27);
+            textBoxStartNum.TabIndex = 1;
+            textBoxStartNum.Text = "-5";
+            textBoxStartNum.TextChanged += textBox2_TextChanged;
             // 
-            // buttonHelp_KVA
+            // groupBoxTask
             // 
-            buttonHelp_KVA.BackColor = SystemColors.ActiveCaption;
-            buttonHelp_KVA.Location = new Point(335, 281);
-            buttonHelp_KVA.Margin = new Padding(2, 1, 2, 1);
-            buttonHelp_KVA.Name = "buttonHelp_KVA";
-            buttonHelp_KVA.Size = new Size(92, 54);
-            buttonHelp_KVA.TabIndex = 11;
-            buttonHelp_KVA.Text = "Справка";
-            buttonHelp_KVA.UseVisualStyleBackColor = false;
-            buttonHelp_KVA.Click += buttonHelp_KVA_Click;
-            // 
-            // groupBoxVvod_KVA
-            // 
-            groupBoxVvod_KVA.Controls.Add(labelStop);
-            groupBoxVvod_KVA.Controls.Add(labelStart_KVA);
-            groupBoxVvod_KVA.Controls.Add(textBoxStart_KVA);
-            groupBoxVvod_KVA.Controls.Add(textBoxStop_KVA);
-            groupBoxVvod_KVA.Location = new Point(1, 215);
-            groupBoxVvod_KVA.Margin = new Padding(2, 1, 2, 1);
-            groupBoxVvod_KVA.Name = "groupBoxVvod_KVA";
-            groupBoxVvod_KVA.Padding = new Padding(2, 1, 2, 1);
-            groupBoxVvod_KVA.Size = new Size(330, 123);
-            groupBoxVvod_KVA.TabIndex = 12;
-            groupBoxVvod_KVA.TabStop = false;
-            groupBoxVvod_KVA.Text = "Ввод данных";
-            // 
-            // labelStop
-            // 
-            labelStop.AutoSize = true;
-            labelStop.Location = new Point(201, 33);
-            labelStop.Margin = new Padding(2, 0, 2, 0);
-            labelStop.Name = "labelStop";
-            labelStop.Size = new Size(75, 15);
-            labelStop.TabIndex = 3;
-            labelStop.Text = "Конец шага:";
-            // 
-            // labelStart_KVA
-            // 
-            labelStart_KVA.AutoSize = true;
-            labelStart_KVA.Location = new Point(8, 34);
-            labelStart_KVA.Margin = new Padding(2, 0, 2, 0);
-            labelStart_KVA.Name = "labelStart_KVA";
-            labelStart_KVA.Size = new Size(72, 15);
-            labelStart_KVA.TabIndex = 2;
-            labelStart_KVA.Text = "Старт шага:";
-            // 
-            // textBoxStart_KVA
-            // 
-            textBoxStart_KVA.Location = new Point(9, 58);
-            textBoxStart_KVA.Margin = new Padding(2, 1, 2, 1);
-            textBoxStart_KVA.Name = "textBoxStart_KVA";
-            textBoxStart_KVA.Size = new Size(110, 23);
-            textBoxStart_KVA.TabIndex = 0;
-            // 
-            // textBoxStop_KVA
-            // 
-            textBoxStop_KVA.Location = new Point(199, 58);
-            textBoxStop_KVA.Margin = new Padding(2, 1, 2, 1);
-            textBoxStop_KVA.Name = "textBoxStop_KVA";
-            textBoxStop_KVA.Size = new Size(110, 23);
-            textBoxStop_KVA.TabIndex = 1;
-            // 
-            // groupBoxResult_KVA
-            // 
-            groupBoxResult_KVA.Controls.Add(textBoxResult_KVA);
-            groupBoxResult_KVA.Location = new Point(554, 8);
-            groupBoxResult_KVA.Margin = new Padding(2, 1, 2, 1);
-            groupBoxResult_KVA.Name = "groupBoxResult_KVA";
-            groupBoxResult_KVA.Padding = new Padding(2, 1, 2, 1);
-            groupBoxResult_KVA.Size = new Size(261, 336);
-            groupBoxResult_KVA.TabIndex = 9;
-            groupBoxResult_KVA.TabStop = false;
-            groupBoxResult_KVA.Text = "Вывод данных                             Результат:";
-            // 
-            // textBoxResult_KVA
-            // 
-            textBoxResult_KVA.Font = new Font("Consolas", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBoxResult_KVA.Location = new Point(3, 33);
-            textBoxResult_KVA.Margin = new Padding(2, 1, 2, 1);
-            textBoxResult_KVA.Multiline = true;
-            textBoxResult_KVA.Name = "textBoxResult_KVA";
-            textBoxResult_KVA.ReadOnly = true;
-            textBoxResult_KVA.ScrollBars = ScrollBars.Vertical;
-            textBoxResult_KVA.Size = new Size(245, 302);
-            textBoxResult_KVA.TabIndex = 0;
+            groupBoxTask.Controls.Add(textBoxTask);
+            groupBoxTask.Location = new Point(12, 12);
+            groupBoxTask.Name = "groupBoxTask";
+            groupBoxTask.Size = new Size(526, 330);
+            groupBoxTask.TabIndex = 2;
+            groupBoxTask.TabStop = false;
+            groupBoxTask.Text = "Условие";
             // 
             // textBoxTask
             // 
-            textBoxTask.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBoxTask.Location = new Point(4, 3);
-            textBoxTask.Margin = new Padding(2, 1, 2, 1);
+            textBoxTask.Location = new Point(6, 26);
             textBoxTask.Multiline = true;
             textBoxTask.Name = "textBoxTask";
             textBoxTask.ReadOnly = true;
-            textBoxTask.Size = new Size(548, 212);
-            textBoxTask.TabIndex = 8;
-            textBoxTask.Text = "Условие\r\n\r\nПротабулировать функцию на заданном диапазоне.\r\nРезультат вывести в виде таблицы.";
+            textBoxTask.Size = new Size(514, 298);
+            textBoxTask.TabIndex = 0;
+            textBoxTask.Text = "Написать программу, которая выводит таблицу значений функции F(x) на заданном диапазоне [-5; 5] с шагом 1.\r\nПроизвести проверку деления на ноль. Значения округлить до двух знаков после запятой.";
+            // 
+            // groupBoxInputData
+            // 
+            groupBoxInputData.Controls.Add(textBoxEnd);
+            groupBoxInputData.Controls.Add(textBoxStart);
+            groupBoxInputData.Controls.Add(textBoxEndNum);
+            groupBoxInputData.Controls.Add(textBoxStartNum);
+            groupBoxInputData.Location = new Point(12, 348);
+            groupBoxInputData.Name = "groupBoxInputData";
+            groupBoxInputData.Size = new Size(339, 90);
+            groupBoxInputData.TabIndex = 3;
+            groupBoxInputData.TabStop = false;
+            groupBoxInputData.Text = "Ввод данных";
+            // 
+            // textBoxEnd
+            // 
+            textBoxEnd.Location = new Point(167, 24);
+            textBoxEnd.Name = "textBoxEnd";
+            textBoxEnd.ReadOnly = true;
+            textBoxEnd.Size = new Size(125, 27);
+            textBoxEnd.TabIndex = 6;
+            textBoxEnd.Text = "Конец шага:";
+            // 
+            // textBoxStart
+            // 
+            textBoxStart.Location = new Point(6, 26);
+            textBoxStart.Name = "textBoxStart";
+            textBoxStart.ReadOnly = true;
+            textBoxStart.Size = new Size(125, 27);
+            textBoxStart.TabIndex = 5;
+            textBoxStart.Text = "Старт шага:";
+            // 
+            // textBoxEndNum
+            // 
+            textBoxEndNum.Location = new Point(167, 57);
+            textBoxEndNum.Name = "textBoxEndNum";
+            textBoxEndNum.ReadOnly = true;
+            textBoxEndNum.Size = new Size(125, 27);
+            textBoxEndNum.TabIndex = 4;
+            textBoxEndNum.Text = "5";
+            // 
+            // groupBoxResult
+            // 
+            groupBoxResult.Controls.Add(textBoxResult);
+            groupBoxResult.Location = new Point(544, 12);
+            groupBoxResult.Name = "groupBoxResult";
+            groupBoxResult.Size = new Size(286, 426);
+            groupBoxResult.TabIndex = 4;
+            groupBoxResult.TabStop = false;
+            groupBoxResult.Text = "Вывод данных";
+            // 
+            // textBoxResult
+            // 
+            textBoxResult.Font = new Font("Consolas", 10F);
+            textBoxResult.Location = new Point(6, 26);
+            textBoxResult.Multiline = true;
+            textBoxResult.Name = "textBoxResult";
+            textBoxResult.ReadOnly = true;
+            textBoxResult.ScrollBars = ScrollBars.Vertical;
+            textBoxResult.Size = new Size(274, 394);
+            textBoxResult.TabIndex = 0;
+            // 
+            // buttonResult
+            // 
+            buttonResult.Location = new Point(357, 348);
+            buttonResult.Name = "buttonResult";
+            buttonResult.Size = new Size(175, 90);
+            buttonResult.TabIndex = 5;
+            buttonResult.Text = "Выполнить";
+            buttonResult.UseVisualStyleBackColor = true;
+            buttonResult.Click += textBox2_TextChanged;
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(817, 347);
-            Controls.Add(groupBoxVvod_KVA);
-            Controls.Add(buttonHelp_KVA);
-            Controls.Add(buttonDone_KVA);
-            Controls.Add(groupBoxResult_KVA);
-            Controls.Add(textBoxTask);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
+            ClientSize = new Size(842, 450);
+            Controls.Add(buttonResult);
+            Controls.Add(groupBoxResult);
+            Controls.Add(groupBoxInputData);
+            Controls.Add(groupBoxTask);
             Name = "FormMain";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Спринт6 | Таск1 | Вариант21 | Клоченок В. А.";
-            groupBoxVvod_KVA.ResumeLayout(false);
-            groupBoxVvod_KVA.PerformLayout();
-            groupBoxResult_KVA.ResumeLayout(false);
-            groupBoxResult_KVA.PerformLayout();
+            Text = "Спринт 6 | Таск 1 | Вариант 21 | Клоченок В. А.";
+            groupBoxTask.ResumeLayout(false);
+            groupBoxTask.PerformLayout();
+            groupBoxInputData.ResumeLayout(false);
+            groupBoxInputData.PerformLayout();
+            groupBoxResult.ResumeLayout(false);
+            groupBoxResult.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Button buttonDone_KVA;
-        private Button buttonHelp_KVA;
-        private GroupBox groupBoxVvod_KVA;
-        private Label labelStop;
-        private Label labelStart_KVA;
-        private TextBox textBoxStart_KVA;
-        private TextBox textBoxStop_KVA;
-        private GroupBox groupBoxResult_KVA;
-        private TextBox textBoxResult_KVA;
+
+        private TextBox textBoxStartNum;
+        private GroupBox groupBoxTask;
+        private GroupBox groupBox1;
+        private GroupBox groupBoxInputData;
+        private PictureBox pictureBox1;
+        private TextBox textBox3;
+        private TextBox textBoxEnd;
+        private TextBox textBoxStart;
+        private TextBox textBoxEndNum;
         private TextBox textBoxTask;
+        private GroupBox groupBoxResult;
+        private TextBox textBoxResult;
+        private Button button1;
+        private Button button2;
+        private Button buttonResult;
     }
 }

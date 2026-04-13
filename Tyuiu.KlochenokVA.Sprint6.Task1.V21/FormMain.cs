@@ -1,10 +1,5 @@
-using System;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Globalization;
-using Tyuiu.KlochenoKVA.Sprint6.Task1.V21.Lib;
-
-namespace Tyuiu.KlochenoKVA.Sprint6.Task1.V21
+using Tyuiu.KlochenokVA.Sprint6.Task1.V21.Lib;
+namespace Tyuiu.KlochenokVA.Sprint6.Task1.V21
 {
     public partial class FormMain : Form
     {
@@ -12,58 +7,29 @@ namespace Tyuiu.KlochenoKVA.Sprint6.Task1.V21
         {
             InitializeComponent();
         }
-
-        private string CenterText(string text, int width)
+        DataService ds = new DataService();
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (text.Length >= width) return text;
-            int left = (width - text.Length) /2;
-            int right = width - text.Length - left;
-            return new string(' ', left) + text + new string(' ', right);
-        }
+            int start = Convert.ToInt32(textBoxStartNum.Text);
+            int end = Convert.ToInt32(textBoxEndNum.Text);
+            string strLine;
 
-        private void buttonHelp_KVA_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Табулирование функции F(x) на диапазоне с шагом1. F(x)=cos(x)+sin(x)/(2-2*x)-4*x. При делении на ноль возвращается0.", "Справка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            int len = ds.GetMassFunction(start, end).Length;
 
-        private void buttonDone_KVA_Click(object sender, EventArgs e)
-        {
-            var ds = new DataService();
-            try
+            double[] value = new double[len];
+
+            value = ds.GetMassFunction(start, end);
+            textBoxResult.Text = "";
+            textBoxResult.AppendText("+----------+----------+" + Environment.NewLine);
+            textBoxResult.AppendText("|    X     |   f(x)   |" + Environment.NewLine);
+            textBoxResult.AppendText("+----------+----------+" + Environment.NewLine);
+            for (int i = 0; i < len; i++)
             {
-                int start = -5;
-                int stop =5;
-                if (!string.IsNullOrWhiteSpace(textBoxStart_KVA.Text)) int.TryParse(textBoxStart_KVA.Text, out start);
-                if (!string.IsNullOrWhiteSpace(textBoxStop_KVA.Text)) int.TryParse(textBoxStop_KVA.Text, out stop);
-
-                var values = ds.GetMassFunction(start, stop);
-                var sb = new System.Text.StringBuilder();
-                var ci = new CultureInfo("ru-RU");
-
-                int col1 =11; // width for X column
-                int col2 =12; // width for f(x) column
-
-                sb.AppendLine("+-----------+------------+");
-                sb.AppendLine("|" + CenterText("X", col1) + "|" + CenterText("f(x)", col2) + "|");
-                sb.AppendLine("+-----------+------------+");
-
-                int idx =0;
-                for (int x = start; x <= stop; x++)
-                {
-                    string xs = x.ToString();
-                    string fs = values[idx].ToString("F2", ci);
-                    sb.AppendLine("|" + CenterText(xs, col1) + "|" + CenterText(fs, col2) + "|");
-                    idx++;
-                }
-
-                sb.AppendLine("+-----------+------------+");
-
-                textBoxResult_KVA.Text = sb.ToString();
+                strLine = String.Format("|{0,5:d}     |  {1, 5:f2}  |", start, value[i]);
+                textBoxResult.AppendText((strLine + Environment.NewLine));
+                start++;
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Произошла ошибка при вычислении", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            textBoxResult.AppendText("+----------+----------+" + Environment.NewLine);
         }
     }
 }
