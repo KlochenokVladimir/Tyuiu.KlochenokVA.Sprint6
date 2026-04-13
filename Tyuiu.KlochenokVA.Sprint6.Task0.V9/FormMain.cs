@@ -1,6 +1,6 @@
-using Tyuiu.KlochenokVA.Sprint6.Task0.V9.Lib;
+using Tyuiu.KlochenoKVA.Sprint6.Task0.V9.Lib;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task0.V9
+namespace Tyuiu.KlochenoKVA.Sprint6.Task0.V9
 {
     public partial class FormMain : Form
     {

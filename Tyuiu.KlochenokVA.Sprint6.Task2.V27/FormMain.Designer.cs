@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task2.V27
+namespace Tyuiu.KlochenoKVA.Sprint6.Task2.V27
 {
     partial class FormMain_KVA
     {

@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Forms;
-using Tyuiu.KlochenokVA.Sprint6.Task3.V9.Lib;
+using Tyuiu.KlochenoKVA.Sprint6.Task3.V9.Lib;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task3.V9
+namespace Tyuiu.KlochenoKVA.Sprint6.Task3.V9
 {
     public partial class Form1 : Form
     {

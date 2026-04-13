@@ -1,5 +1,5 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint6;
-namespace Tyuiu.KlochenokVA.Sprint6.Task4.V29.Lib
+namespace Tyuiu.KlochenoKVA.Sprint6.Task4.V29.Lib
 {
     public class DataService : ISprint6Task4V29
     {

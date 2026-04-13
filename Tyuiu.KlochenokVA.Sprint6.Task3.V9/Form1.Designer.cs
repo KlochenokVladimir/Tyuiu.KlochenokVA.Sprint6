@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task3.V9
+namespace Tyuiu.KlochenoKVA.Sprint6.Task3.V9
 {
     partial class Form1
     {

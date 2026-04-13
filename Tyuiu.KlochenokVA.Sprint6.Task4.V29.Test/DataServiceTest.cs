@@ -1,5 +1,5 @@
-﻿using Tyuiu.KlochenokVA.Sprint6.Task4.V29.Lib;
-namespace Tyuiu.KlochenokVA.Sprint6.Task4.V29.Test
+﻿using Tyuiu.KlochenoKVA.Sprint6.Task4.V29.Lib;
+namespace Tyuiu.KlochenoKVA.Sprint6.Task4.V29.Test
 {
     [TestClass]
     public sealed class DataServiceTest

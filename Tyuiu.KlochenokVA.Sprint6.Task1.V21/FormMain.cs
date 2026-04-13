@@ -2,9 +2,9 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Globalization;
-using Tyuiu.KlochenokVA.Sprint6.Task1.V21.Lib;
+using Tyuiu.KlochenoKVA.Sprint6.Task1.V21.Lib;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task1.V21
+namespace Tyuiu.KlochenoKVA.Sprint6.Task1.V21
 {
     public partial class FormMain : Form
     {

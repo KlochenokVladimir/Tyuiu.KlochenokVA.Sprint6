@@ -1,4 +1,4 @@
-namespace Tyuiu.KlochenokVA.Sprint6.Task3.V9
+namespace Tyuiu.KlochenoKVA.Sprint6.Task3.V9
 {
     internal static class Program
     {

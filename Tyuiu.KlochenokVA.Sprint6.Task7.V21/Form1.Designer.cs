@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.KlochenokVA.Sprint6.Task7.V21
+﻿namespace Tyuiu.KlochenoKVA.Sprint6.Task7.V21
 {
     partial class Form1
     {

@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.KlochenokVA.Sprint6.Task5.V8
+﻿namespace Tyuiu.KlochenoKVA.Sprint6.Task5.V8
 {
     partial class FormMain
     {
@@ -147,7 +147,7 @@
             // 
             // dataGridViewVivod_KVA
             // 
-            dataGridViewVivod_KVA.BackgroundColor = SystemColors.ControlDarkDark;
+            dataGridViewVivod_KVA.BackgroundColor = SystemColors.ControlDarKVArk;
             dataGridViewVivod_KVA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewVivod_KVA.Dock = DockStyle.Fill;
             dataGridViewVivod_KVA.Location = new Point(3, 25);

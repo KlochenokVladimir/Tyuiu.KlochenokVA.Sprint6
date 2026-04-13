@@ -2,7 +2,7 @@
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task4.V29
+namespace Tyuiu.KlochenoKVA.Sprint6.Task4.V29
 {
     partial class Form1
     {

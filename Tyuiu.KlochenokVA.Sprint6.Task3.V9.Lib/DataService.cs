@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using tyuiu.cources.programming.interfaces.Sprint6;
-namespace Tyuiu.KlochenokVA.Sprint6.Task3.V9.Lib
+namespace Tyuiu.KlochenoKVA.Sprint6.Task3.V9.Lib
 {
     public class DataService : ISprint6Task3V9
     {

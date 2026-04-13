@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task2.V27
+namespace Tyuiu.KlochenoKVA.Sprint6.Task2.V27
 {
     internal static class Program
     {

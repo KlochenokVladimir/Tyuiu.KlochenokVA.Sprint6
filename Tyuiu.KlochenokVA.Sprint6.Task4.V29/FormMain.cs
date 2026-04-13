@@ -1,7 +1,7 @@
 using System.Windows.Forms.VisualStyles;
-using Tyuiu.KlochenokVA.Sprint6.Task4.V29.Lib;
+using Tyuiu.KlochenoKVA.Sprint6.Task4.V29.Lib;
 
-namespace Tyuiu.KlochenokVA.Sprint6.Task4.V29
+namespace Tyuiu.KlochenoKVA.Sprint6.Task4.V29
 {
     public partial class Form1 : Form
     {

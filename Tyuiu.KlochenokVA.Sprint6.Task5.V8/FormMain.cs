@@ -1,6 +1,6 @@
 using System.Diagnostics;
-using Tyuiu.KlochenokVA.Sprint6.Task5.V8.Lib;
-namespace Tyuiu.KlochenokVA.Sprint6.Task5.V8
+using Tyuiu.KlochenoKVA.Sprint6.Task5.V8.Lib;
+namespace Tyuiu.KlochenoKVA.Sprint6.Task5.V8
 {
     public partial class FormMain : Form
     {
